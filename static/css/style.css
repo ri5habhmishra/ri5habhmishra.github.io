@@ -12,6 +12,11 @@
   box-sizing: border-box;
 }
 
+*::selection {
+  background-color: #FFCB34;
+  color: #fff;
+}
+
 @keyframes contentReveal{
   0%{
       opacity: 0;
