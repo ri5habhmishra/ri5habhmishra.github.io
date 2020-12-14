@@ -454,7 +454,7 @@ html, body{
 
 .projectNumberContainer {
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   font-size: 2rem;
   opacity: 0.3;
 }
@@ -550,7 +550,7 @@ html, body{
 
 .skillButton img {
   height: 0.75rem;
-  width: 10.75rem;
+  width: 0.75rem;
   transition: 0.3s;
 }
 
