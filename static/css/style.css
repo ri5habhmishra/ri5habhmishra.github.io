@@ -425,6 +425,10 @@ html, body{
   align-items: center;
 }
 
+.LastMkStudio {
+  flex-direction: row-reverse;
+}
+
 .workGridLastLeft {
   height: 100%;
   width: 50%;
@@ -461,6 +465,7 @@ html, body{
   width: 30rem;
 }
 
+
 .workImg {
   transition: 0.5s;
 }
@@ -468,6 +473,7 @@ html, body{
 .workImg:hover {
   opacity: 0.3;
 }
+
 
 .projectNumberContainer {
   font-weight: 700;
@@ -647,7 +653,7 @@ html, body{
 footer {
   width: 100%;
   background-color: #000000;
-  height: 20rem;
+  height: 25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -934,6 +940,13 @@ footer {
     margin-top: 1rem
   }
 
+  .LastMkStudio {
+    height: 35rem;
+    margin-top: 0;
+    flex-direction: row;
+    margin-bottom: 5rem;
+  }
+
   .workGridLastLeft {
     height: 30rem;
     width: 18rem;
@@ -1019,6 +1032,7 @@ footer {
   .socialTitle {
     font-size: 2.25rem;
     margin-bottom: 3rem;
+    opacity: 1;
   }
 
   .contactContainer {
@@ -1035,6 +1049,10 @@ footer {
 
   .socialLinksContainer ul li a {
     font-size: 1rem;
+  }
+
+  footer {
+    height: 25rem;
   }
 
 
