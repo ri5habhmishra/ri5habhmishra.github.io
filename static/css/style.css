@@ -159,7 +159,7 @@ html, body{
   font-weight: 400;
   color: #272727;
   padding-left: 1rem;
-  animation: greetingSectionReveal 1.75s ease;
+  /* animation: greetingSectionReveal 1.75s ease; */
 }
 
 .greetingName {
@@ -172,7 +172,7 @@ html, body{
   font-weight: 300;
   color: #363636;
   margin-top: 1.25rem;
-  animation: greetingSectionReveal 1.75s ease;
+  /* animation: greetingSectionReveal 1.75s ease; */
   padding-left: 1rem;
 }
 
@@ -189,7 +189,7 @@ html, body{
 }
 
 .curveContainer {
-  animation: curveReveal 2s ease; 
+  /* animation: curveReveal 2s ease;  */
   padding-left: 1rem;
   margin-top: 4rem;
   margin-left: 5rem; 
