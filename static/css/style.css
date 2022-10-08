@@ -653,7 +653,7 @@ html, body{
 footer {
   width: 100%;
   background-color: #000000;
-  height: 25rem;
+  height: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1052,7 +1052,7 @@ footer {
   }
 
   footer {
-    height: 25rem;
+    height: 30rem;
   }
 
 
