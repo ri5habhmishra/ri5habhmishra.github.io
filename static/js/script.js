@@ -77,9 +77,12 @@ var get_distance_delta = () => {
 }
 
 function handleLocationError(browserHasGeolocation) {
-  browserHasGeolocation ? distanceDeltaDivContainerElement.innerText = "Uh oh, couldn't get the location permission!" : distanceDeltaDivContainerElement.innerText ="Uh oh, your browser doesn't support geolocation."
+  browserHasGeolocation ? distanceDeltaDivContainerElement.innerText = "Uh oh, couldn't get the location permission! Allow location permission to see a magic." : distanceDeltaDivContainerElement.innerText = "Uh oh, your browser doesn't support geolocation."
 }
 
-get_distance_delta();
+setTimeout(() => {
+  get_distance_delta();
+}, 2500)
+
 
 // distance compute ends
