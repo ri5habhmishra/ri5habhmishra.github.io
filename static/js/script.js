@@ -66,7 +66,12 @@ var get_distance_delta = () => {
 
         var distanceDelta = calculateDistance(pos, my_coordinates);
 
-        distanceDelta <= 5 ? distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + distanceDelta.toFixed(2) + "</b> Kms from me! Lets grab a cup of coffe sometime soon." : distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + distanceDelta.toFixed(2) + "</b> Kms from me!"
+        if ( distanceDelta <= 1 ) {
+          distanceDelta <= 5 ? distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + (distanceDelta.toFixed(2) * 1000) + "</b> Mts from my location! Lets grab a cup of coffe sometime soon." : distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + distanceDelta.toFixed(2) + "</b> Kms from me!"
+        } else {
+          distanceDelta <= 5 ? distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + distanceDelta.toFixed(2) + "</b> Kms from my location! Lets grab a cup of coffe sometime soon." : distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + distanceDelta.toFixed(2) + "</b> Kms from me!"
+        }
+        
 
         // setTimeout(() => {
           showLocationToastbarElement(locationToastbarElement)
@@ -83,7 +88,7 @@ var get_distance_delta = () => {
 }
 
 function handleLocationError(browserHasGeolocation) {
-  browserHasGeolocation ? distanceDeltaDivContainerElement.innerText = "Uh oh, couldn't get the location permission! Allow location permission to see a magic." : distanceDeltaDivContainerElement.innerText = "Uh oh, your browser doesn't support geolocation."
+  browserHasGeolocation ? distanceDeltaDivContainerElement.innerText = "Uh oh, couldn't get the location permission! Enable and allow location permission to see something cool." : distanceDeltaDivContainerElement.innerText = "Uh oh, your browser doesn't support geolocation."
 }
 
 function showLocationToastbarElement(element) {

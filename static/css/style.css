@@ -122,14 +122,14 @@ body {
 .heroSectionGridContainer div {
   height: 100%;
   width: 10rem;
-  border: 1px solid #ececec;
+  border: 1px solid #f0f0f0;
   border-right: none;
   border-top: none;
   border-bottom: none;
 }
 
 .heroSectionGridContainer div:last-child {
-  border-right: 1px solid #f3f3f3;
+  border-right: 1px solid #f0f0f0;
 }
 
 @keyframes greetingSectionReveal {
@@ -807,7 +807,7 @@ footer {
   }
 
   .mainNavContainer {
-    width: 18rem;
+    width: 20.5rem;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -1105,7 +1105,7 @@ footer {
   }
 
   .footerSocial {
-    width: 18rem;
+    width: 20rem;
   }
 
   .socialTitle {
