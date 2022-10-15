@@ -864,8 +864,11 @@ footer {
 
   .workSectionTitle span {
     font-size: 0.8rem;
-    margin-left: 0.5rem;
+    /* margin-left: 0.5rem; */
+    /* padding-bottom: 30px; */
+    /* line-height: 2rem; */
   }
+
 
   .workUnderLineContainer {
     padding-left: 2.5rem;
