@@ -179,6 +179,22 @@ body {
   padding-left: 1rem;
 }
 
+.distanceDeltaDivContainer {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #363636;
+  margin-top: 1.25rem;
+  /* animation: greetingSectionReveal 1.75s ease; */
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+#distanceDeltaBold {
+  color: #545454;
+  font-size: 1.25rem;
+}
+
 
 @keyframes curveReveal {
   0% {
@@ -805,6 +821,19 @@ footer {
     margin-top: 0.75rem;
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .distanceDeltaDivContainer {
+    padding-left: 2.25rem;
+    width: 80vw;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
+  #distanceDeltaBold {
+    color: #545454;
+    font-size: 1rem;
   }
 
   .curveContainer {

@@ -1,12 +1,12 @@
-$(function() {
-  $('.showMoreSkillButton').click(function() {
+$(function () {
+  $('.showMoreSkillButton').click(function () {
     const skillElementsContainer = $(this).parent().parent().next();
     if (skillElementsContainer.css("display") === "none") {
-      $(this).css({"transform": "rotate(-45deg)"});
+      $(this).css({ "transform": "rotate(-45deg)" });
       skillElementsContainer.addClass("skillTypeElementsContainerAnimationClass");
     } else {
       skillElementsContainer.removeClass("skillTypeElementsContainerAnimationClass");
-      $(this).css({"transform": "rotate(0deg)"});
+      $(this).css({ "transform": "rotate(0deg)" });
     }
   })
 })
@@ -26,3 +26,60 @@ function moveScrollIndicator(e) {
 }
 
 // scrollIndicator ends
+
+
+// distance compute starts
+var distanceDeltaDivContainerElement = document.getElementById("distanceDeltaDivContainer");
+
+var my_coordinates = {
+  lat: 12.908458,
+  lng: 77.649244
+}
+
+var earthRadius = 6371.0710;
+
+function calculateDistance(posA, posB) {
+  var lat = posB.lat - posA.lat;
+  var lon = posB.lng - posA.lng;
+
+  var disLat = (lat * Math.PI * earthRadius) / 180;
+  var disLon = (lon * Math.PI * earthRadius) / 180;
+
+  var ret = Math.pow(disLat, 2) + Math.pow(disLon, 2);
+  ret = Math.sqrt(ret);
+
+  return ret;
+}
+
+
+var get_distance_delta = () => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        };
+
+        // console.log("pos found: ", pos);
+
+        var distanceDelta = calculateDistance(pos, my_coordinates);
+        distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + distanceDelta.toFixed(2) + "</b> Kms from me!";
+      },
+      () => {
+        handleLocationError(true);
+      }
+    );
+  } else {
+    handleLocationError(false);
+  }
+  // });
+}
+
+function handleLocationError(browserHasGeolocation) {
+  browserHasGeolocation ? distanceDeltaDivContainerElement.innerText = "Uh oh, couldn't get the location permission!" : distanceDeltaDivContainerElement.innerText ="Uh oh, your browser doesn't support geolocation."
+}
+
+get_distance_delta();
+
+// distance compute ends
