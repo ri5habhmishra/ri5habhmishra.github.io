@@ -30,6 +30,7 @@ function moveScrollIndicator(e) {
 
 // distance compute starts
 var distanceDeltaDivContainerElement = document.getElementById("distanceDeltaDivContainer");
+var locationToastbarElement = document.getElementById('locationToastbar');
 
 var my_coordinates = {
   lat: 12.908458,
@@ -64,7 +65,12 @@ var get_distance_delta = () => {
         // console.log("pos found: ", pos);
 
         var distanceDelta = calculateDistance(pos, my_coordinates);
-        distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + distanceDelta.toFixed(2) + "</b> Kms from me!";
+
+        distanceDelta <= 5 ? distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + distanceDelta.toFixed(2) + "</b> Kms from me! Lets grab a cup of coffe sometime soon." : distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + distanceDelta.toFixed(2) + "</b> Kms from me!"
+
+        // setTimeout(() => {
+          showLocationToastbarElement(locationToastbarElement)
+        // }, 500);
       },
       () => {
         handleLocationError(true);
@@ -80,9 +86,25 @@ function handleLocationError(browserHasGeolocation) {
   browserHasGeolocation ? distanceDeltaDivContainerElement.innerText = "Uh oh, couldn't get the location permission! Allow location permission to see a magic." : distanceDeltaDivContainerElement.innerText = "Uh oh, your browser doesn't support geolocation."
 }
 
+function showLocationToastbarElement(element) {
+  element.style.marginRight = "0";
+  // element.style.display = "flex";
+
+  setTimeout(() => {
+    element.style.marginRight = "-30rem";
+    setTimeout(() => {
+      // element.style.display = "none";
+    }, 500);
+
+  }, 2500)
+}
+
 setTimeout(() => {
   get_distance_delta();
 }, 2500)
+
+
+
 
 
 // distance compute ends

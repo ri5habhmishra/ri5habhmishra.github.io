@@ -183,7 +183,7 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  color: #363636;
+  color: #6f6f6f;
   margin-top: 1.25rem;
   /* animation: greetingSectionReveal 1.75s ease; */
   padding-left: 1rem;
@@ -191,7 +191,7 @@ body {
 }
 
 #distanceDeltaBold {
-  color: #545454;
+  color: #6d6d6d;
   font-size: 1.25rem;
 }
 
@@ -721,7 +721,7 @@ footer {
   color: rgba(255, 255, 255, 0.418);
   text-align: left;
   letter-spacing: 0.1rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.25rem;
 }
 
@@ -757,6 +757,43 @@ footer {
 
 
 /* footer ends */
+
+
+
+/* locationToastbar starts */
+
+.locationToastbar {
+  width: 28rem;
+  height: auto;
+  position: fixed;
+  z-index: 9999;
+  top: 2rem;
+  right: 2rem;
+  background-color: #fff;
+  padding-top: 03rem;
+  padding-bottom: 03rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 0.5rem;
+  box-shadow: 0px 10px 20px #00000020;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 300;
+  border-bottom: 5px solid #FFCB34;
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: #333;
+  /* flex-direction: column; */
+  
+  transition: 0.5s;
+  margin-right: -30rem;
+  /* display: none; */
+  
+}
+
+
+/* locationToastbar ends */
 
 
 /* media queries start */
@@ -1082,7 +1119,7 @@ footer {
   }
 
   .emailNameContainer {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
 
   .socialLinksContainer ul li:first-child {
@@ -1096,6 +1133,20 @@ footer {
   footer {
     height: 30rem;
   }
+
+  .locationToastbar {
+    width: 85vw;
+    /* width: 85vw; */
+    height: auto;
+    position: fixed;
+    z-index: 9999;
+    top: 2rem;
+    right: 7.5vw;
+    background-color: #fff;
+    padding-top: 03rem;
+    padding-bottom: 03rem;
+  }
+  
 
 
 
