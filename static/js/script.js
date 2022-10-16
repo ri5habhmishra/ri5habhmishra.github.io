@@ -67,9 +67,9 @@ var get_distance_delta = () => {
         var distanceDelta = calculateDistance(pos, my_coordinates);
 
         if ( distanceDelta <= 1 ) {
-          distanceDelta <= 5 ? distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + (distanceDelta.toFixed(2) * 1000) + "</b> Mts from my location! Lets grab a cup of coffe sometime soon." : distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + distanceDelta.toFixed(2) + "</b> Kms from me!"
+          distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + (distanceDelta.toFixed(2) * 1000) + "</b> Mts from my location! Lets grab a cup of coffe sometime soon.";
         } else {
-          distanceDelta <= 5 ? distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + distanceDelta.toFixed(2) + "</b> Kms from my location! Lets grab a cup of coffe sometime soon." : distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + distanceDelta.toFixed(2) + "</b> Kms from me!"
+          distanceDelta <= 5 ? distanceDeltaDivContainerElement.innerHTML = "You're just <b id='distanceDeltaBold'>" + distanceDelta.toFixed(2) + "</b> Kms from my location! Lets grab a cup of coffe sometime soon." : distanceDeltaDivContainerElement.innerHTML = "You're <b id='distanceDeltaBold'>" + distanceDelta.toFixed(2) + "</b> Kms from my location! Let's cathup over LinkedIn/Email sometime."
         }
         
 
