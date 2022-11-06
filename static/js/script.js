@@ -74,7 +74,7 @@ var get_distance_delta = () => {
         
 
         // setTimeout(() => {
-          showLocationToastbarElement(locationToastbarElement)
+          // showLocationToastbarElement(locationToastbarElement)
         // }, 500);
       },
       () => {
